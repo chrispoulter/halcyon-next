@@ -7,6 +7,7 @@ import { Toaster } from '@/components/ui/sonner';
 import { AuthProvider } from '@/components/auth-provider';
 import { ThemeProvider } from '@/components/theme-provider';
 import { routes } from '@/routes';
+import '@/otel';
 
 import '@/index.css';
 
