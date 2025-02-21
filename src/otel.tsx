@@ -17,13 +17,11 @@ import {
 } from '@opentelemetry/semantic-conventions';
 import { config } from '@/lib/config';
 
-// Configure the exporter for OTLP (HTTP)
 // const otlpExporter = new OTLPTraceExporter({
 //     url: 'http://localhost:5341/ingest/otlp/v1/traces', // Change this to match your Seq ingestion endpoint
 //     headers: {}, // Add auth headers if needed
 // });
 
-// Define the OpenTelemetry provider with span processors
 const provider = new WebTracerProvider({
     resource: new Resource({
         [ATTR_SERVICE_NAME]: 'halcyon',
@@ -35,7 +33,6 @@ const provider = new WebTracerProvider({
     ],
 });
 
-// Register provider and instrumentations
 provider.register({
     contextManager: new ZoneContextManager(),
 });
