@@ -11,8 +11,6 @@ import { ProfileLoading } from '@/features/profile/profile/profile-loading';
 import { toLocaleString } from '@/lib/dates';
 
 export function ProfilePage() {
-    console.log('profile page');
-
     const navigate = useNavigate();
 
     const { clearAuth } = useAuth();
